@@ -118,5 +118,5 @@ jsonContent:
     tags: true
 
 # 备案号与备案网址
-websiteRecordsNum: '渝ICP备16005990号-1'
+websiteRecordsNum: '渝ICP备16005990号'
 websiteRecordsUrl: 'http://www.miibeian.gov.cn'
