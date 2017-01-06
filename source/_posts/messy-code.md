@@ -8,8 +8,7 @@ tags:
 	- Eclipse
 	- Web
 ---
-
-![](/assets/blogImg/messy-code/1.png)
+{% imgurl assets/images/a/messy-code/1.jpg %}
 
 在我最开始接触实际网站系统开发的时候，
 经常遇到文本乱码，并且始终没有解决完善，
@@ -32,17 +31,27 @@ tags:
 ** 统一Eclipse编码格式 **
 修改Workspace编码格式
 &emsp;&emsp;在Eclipse菜单栏中，选择Windows->Perferences->General->Workspace，在右侧找到Text file encoding修改为UTF-8：
-<div align="center"><img src="/assets/blogImg/messy-code/2.png" width="50%" height="50%" /><br/><small>修改Workspace编码格式 图解</small></div>
+<div align="center">
+	{% imgurl assets/images/a/messy-code/2.jpg width:50% height:50% %}
+	<small>修改Workspace编码格式 图解</small>
+</div>
 
 
 修改Project编码格式
 &emsp;&emsp;选择某个项目，单击右键，选择Properties->Resource，在右侧找到Text file encoding修改为UTF-8：
-<div align="center"><img src="/assets/blogImg/messy-code/3.png" width="50%" height="50%" /><br/><small>修改Project编码格式 图解</small></div>
+<div align="center">
+	{% imgurl assets/images/a/messy-code/3.jpg width:50% height:50% %}
+	<small>修改Project编码格式 图解</small>
+</div>
 
 
 修改Content-Type
 &emsp;&emsp;在Eclipse菜单栏中，选择Windows->Perferences->General->Content-Type，在右侧找到Text->Java Source File(如果有使用到JSP文件可以找到Jsp)更新为UTF-8，切记一定要点击右边的Update：
-<div align="center"><img src="/assets/blogImg/messy-code/4.png" width="50%" height="50%" /><br/><small>修改Content-Type 图解</small><br/><small style="color: red">当然，为了所有文件都统一，可以全部更新，毕竟有些文件类型用不到</small></div>
+<div align="center">
+	{% imgurl assets/images/a/messy-code/4.jpg width:70% height:70% %}
+	<small>修改Content-Type 图解</small>
+	<small style="color: red">当然，为了所有文件都统一，可以全部更新，毕竟有些文件类型用不到</small>
+</div>
 
 修改单个文件编码格式
 &emsp;&emsp;与Project类似，只是选择单个文件，这里就不截图了。

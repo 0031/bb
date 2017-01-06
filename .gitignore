@@ -6,3 +6,5 @@ node_modules/
 public/
 .deploy*/
 themes/landscape
+themes/node_modules
+qiniu/

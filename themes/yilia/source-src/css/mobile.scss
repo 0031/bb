@@ -222,8 +222,12 @@ html, body, #container {
     padding: 0 13px;
 }
 
+#article-nav{
+    text-align: center;
+}
 #article-nav #article-nav-older {
     float: none;
+    display: block;
 }
 #article-nav .article-nav-link-wrap .article-nav-title {
     font-size: 16px;

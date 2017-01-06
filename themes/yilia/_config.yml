@@ -2,24 +2,24 @@
 
 menu:
   主页: /
-  发现: /tags/发现/
   留言: /guest
+  归档: /archives
 
 # SubNav
 subnav:
-  github: "https://github.com/0031"
-  #weibo: "#"
-  #rss: "#"
-  #zhihu: "#"
-  qq: "tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=396679132"
-  #weixin: "#"
-  #jianshu: "#"
-  #douban: "#"
-  mail: "mailto:0031git@gmail.com"
-  #facebook: "#"
-  #google: "#"
-  #twitter: "#"
-  #linkedin: "#"
+  github: 'https://github.com/0031'
+  #weibo: '#'
+  #rss: '#'
+  #zhihu: '#'
+  qq: 'tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=396679132'
+  #weixin: '#'
+  #jianshu: '#'
+  #douban: '#'
+  mail: 'mailto:0031git@gmail.com'
+  #facebook: '#'
+  #google: '#'
+  #twitter: '#'
+  #linkedin: '#'
 
 rss: /atom.xml
 
@@ -31,9 +31,9 @@ root:
 # Content
 
 # 文章太长，截断按钮文字
-excerpt_link: more
+excerpt_link: false
 # 文章卡片右下角常驻链接，不需要请设置为false
-show_all_link: '展开全文'
+show_all_link: '继续阅读'
 # 数学公式
 mathjax: false
 # 是否在新窗口打开链接
@@ -57,14 +57,14 @@ google_analytics: ''
 favicon: /assets/images/favicon.ico
 
 #你的头像url
-avatar: /assets/images/avatar.png
+avatar: /assets/images/avatar.jpg
 
 #是否开启分享
 share_jia: true
 
 #是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
 #若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
-duoshuo: "0031"
+duoshuo: '0031'
 
 # 智能菜单
 # 如不需要，将该对应项置为false
@@ -84,3 +84,7 @@ friends:
   逐梦博客: http://www.deanhan.cn/
 
 aboutme: 0031，<br>就读与于重交，无业游民。<br><br>热爱桌球与跑步，<br/>目前是一枚Java程序猿。<br/><br/>涉世未深，不卑不亢，<br>及时宜自勉，岁月不待人。
+
+post:
+  prev: '新篇'
+  next: '旧篇'

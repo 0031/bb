@@ -32,13 +32,21 @@
                   <div class="reward-box">
                     <% if(theme.alipay) {%>
                     <div class="reward-box-item">
-                      <img class="reward-img" src="<%= theme.alipay%>">
+                      <% if (config.imgurl){ %>
+                        <img class="reward-img" src="<%- config.imgurl %><%= theme.alipay%>">
+                      <% } else{ %>
+                        <img class="reward-img" src="<%= theme.alipay%>">
+                      <% } %>
                       <span class="reward-type">支付宝扫一扫</span>
                     </div>
                     <% } %>
                     <% if(theme.weixin) {%>
                     <div class="reward-box-item">
-                      <img class="reward-img" src="<%= theme.weixin%>">
+                      <% if (config.imgurl){ %>
+                        <img class="reward-img" src="<%- config.imgurl %><%= theme.weixin%>">
+                      <% } else{ %>
+                        <img class="reward-img" src="<%= theme.weixin%>">
+                      <% } %>
                       <span class="reward-type">微信扫一扫</span>
                     </div>
                     <% } %>

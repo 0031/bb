@@ -29,9 +29,14 @@
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
   <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
+    <% if (config.imgurl){ %>
+      <link rel="icon" href="<%- config.imgurl %><%- theme.favicon %>">
+    <% } else{ %>
+      <link rel="icon" href="<%- theme.favicon %>">
+    <% } %>
   <% } %>
   <%- css('main.css?v=4.0.0') %>
+  <%- css('/assets/css/returnToTop.css') %>
   <%- partial('google-analytics') %>
   <%- partial('baidu-analytics') %>
 </head>

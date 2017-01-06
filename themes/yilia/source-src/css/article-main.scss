@@ -112,7 +112,6 @@
     }
   }
 }
-
 .article-more-link{
   margin-top: 0;
   text-align: left;
@@ -134,6 +133,9 @@
       visibility: hidden;
     }
   }
+}
+.article-index .article-more-link{
+    float: left;
 }
 .article-info.info-on-right{
 	margin: 10px 0 0 0;

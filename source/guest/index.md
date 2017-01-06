@@ -2,7 +2,10 @@
 title:  再见，时光。
 closeDate: true
 ---
-<div align="center">![](/assets/images/guest.png)</div>
+
+<div align="center">
+	{% imgurl assets/images/guest.jpg title:再见，时光。 %}
+</div>
 
 >	回首往事，日子中竟全是斑斓的光影，
 	记忆的屏障中，曾经心动的声音已渐渐远去。

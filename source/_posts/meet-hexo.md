@@ -7,7 +7,7 @@ tags:
 	- 发现
 ---
 
-![](/assets/blogImg/meet-hexo/1.png)
+{% imgurl assets/images/a/meet-hexo/1.jpg %}
 
 之前写过一款Java博客，
 经验不足，没有及时做好数据库备份，
