@@ -6,7 +6,6 @@ tags:
 	- Java
 	- Tomcat
 	- Eclipse
-	- Web
 ---
 {% imgurl assets/images/a/messy-code/1.jpg %}
 

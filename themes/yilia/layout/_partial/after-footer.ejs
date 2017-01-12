@@ -13,7 +13,15 @@
 </script>
 
 <%- partial('script') %>
-<%- js('/assets/js/returnToTop.js') %>
+<%- js('/assets/plugins/return-to-top/dist/js/return-to-top.min.js') %>
+<script>
+	window.returnToTop.init({
+		'bg': {
+	 		'dir': '/assets/plugins/return-to-top/dist/images'
+	 	},
+	 	'scroll': 'container'
+	});
+</script>
 <% if (theme.mathjax){ %>
 <%- partial('mathjax') %>
 <% } %>
