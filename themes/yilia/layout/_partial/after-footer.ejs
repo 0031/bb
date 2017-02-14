@@ -16,10 +16,19 @@
 <%- js('/assets/plugins/return-to-top/dist/js/return-to-top.min.js') %>
 <script>
 	window.returnToTop.init({
+		'namespace': 'pc',
 		'bg': {
 	 		'dir': '/assets/plugins/return-to-top/dist/images'
 	 	},
 	 	'scroll': 'container'
+	});
+	window.returnToTop.init({
+		'namespace': 'mobile',
+		'bg': {
+	 		'dir': '/assets/plugins/return-to-top/dist/images'
+	 	},
+	 	'scroll': 'window',
+	 	'id': 'return-to-top-mobile',
 	});
 </script>
 <% if (theme.mathjax){ %>
