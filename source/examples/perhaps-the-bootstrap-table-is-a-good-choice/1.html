@@ -1,0 +1,74 @@
+layout: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap-table示例</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.css">
+</head>
+<body>
+    <table id="table"></table>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.js"></script>
+	<script>
+        var table = $('#table');
+		// 直接调用bootstrapTable进行table初始化
+        var jsons = [
+            {
+                id: 0,
+                c1: 'row1 col1',
+                c2: 'row1 col2',
+                c4: 'row1 col4'
+            }, {
+                id: 1,
+                c1: 'row2 col1',
+                c2: 'row2 col1',
+                c4: 'row2 col4'
+            }, {
+                id: 2,
+                c1: 'row2 col1',
+                c2: 'row3 col2',
+                c4: 'row3 col4'
+            }, {
+                id: 4,
+                c1: 'row2 col1',
+                c2: 'row4 col2',
+                c4: 'row4 col4'
+            }
+        ];
+		table.bootstrapTable({
+            columns: [
+                {
+                	// 一般来说，显示数据表格需要加一个隐藏id列
+                	visible: false,
+                    field: 'id',
+                    align: 'center'
+                }, {
+                    title: 'Column 1',
+                    field: 'c1',
+                    align: 'center',
+                }, {
+                    title: 'Column 2',
+                    field: 'c2',
+                    align: 'center'
+                }, {
+                    title: 'Column 3',
+                    align: 'center',
+                    // 你可能会使用到整列默认参数，可以通过formatter配置
+                    formatter: function () { return 'default c3'; }
+                }, {
+                    title: 'Column 4',
+                    field: 'c4',
+                    align: 'center'
+                }
+            ],
+            data: jsons
+        });
+        
+
+	</script>
+</body>
+</html>

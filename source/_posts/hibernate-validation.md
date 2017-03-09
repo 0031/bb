@@ -84,13 +84,12 @@ public class LoginController {
 由于经常使用到几个变量，为提高复用性，节省开发时间，因此诞生了一个Util工具类：
 
 ``` java
-// Hibernate校验器帮助类，对常用的几个变量做了统一处理
+// Hibernate校验器帮助类，对一些内部变量做了统一处理
 // 在bean中需要配置校验注解例如@NotNull、@Valid等
 public class ValidateUtil {
 	// 使用校验器，先对数据进行合法性校验
 	private static ValidatorFactory factory;
 	private static Validator validator;
-	// 对变量进行初始化
 	static{
 		factory = Validation.buildDefaultValidatorFactory();
 		validator = factory.getValidator();
@@ -107,19 +106,32 @@ public class ValidateUtil {
 	public static <T> boolean isLegal(T obj){
 		return validate(obj).size() == 0 ? true : false;
 	}
-	// 通过结果集获取错误信息，如果没有则返回空
-	public static <T> String getMessage(Set<ConstraintViolation<T>> set){
+	// 获取出错的字段集合
+	public static <T> List<String> getErrorProperties(Set<ConstraintViolation<T>> set){
+		return getErrors(set, false);
+	}
+	// 获取出错信息集合
+	public static <T> List<String> getErrorMessages(Set<ConstraintViolation<T>> set){
+		return getErrors(set, true);
+	}
+	/**
+	 * 获取出错信息
+	 * @param showMsg 是否显示详细信息
+	 * @return
+	 */
+	public static <T> List<String> getErrors(Set<ConstraintViolation<T>> set, boolean showMsg){
+		List<String> list = new ArrayList<String>();
 		if(set.size() != 0){
-			StringBuffer msg = new StringBuffer();
 			for (ConstraintViolation<T> c : set) {
-				msg.append(c.toString());
-				msg.append(",");
+				String error = c.getPropertyPath().toString();
+				// 如果需要显示出错详细信息
+				if(showMsg){
+					error += c.getMessage().toString();
+				}
+				list.add(error);
 			}
-			// 删除最后一个,返回结果
-			msg.deleteCharAt(msg.length() - 1);
-			return msg.toString();
 		}
-		return null;
+		return list;
 	}
 }
 ```
